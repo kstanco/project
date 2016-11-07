@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="scripts/angular.min.js"></script>
+
+<link rel="stylesheet" type="text/css" href="scripts/bootstrap.css">
+
+<style>
+/* Set black background color, white text and some padding */
+footer {
+	background-color: #555;
+	color: white;
+	padding: 15px;
+}
+</style>
+</head>
+
+<body>
+
+  <div ng-app="myApp">
+    <div my-navbar></div>
+    <div class="container text-center">
+      <div class="row">
+        <left-panel></left-panel>
+        <ui-view></ui-view>
+        <right-panel></right-panel>
+      </div>
+    </div>
+
+    <my-footer></my-footer>
+  </div>
+  <script
+    src="scripts/angular-ui-router.js">
+			<script type="text/javascript" src="scripts/app/app.js">
+		</script>
+  <script type="text/javascript" src="scripts/directive/footer.js"></script>
+  <script src="scripts/directive/leftPanel.js"></script>
+  <script src="scripts/directive/navbar.js"></script>
+  <script src="scripts/directive/rightPanel.js"></script>
+</body>
+</html>
