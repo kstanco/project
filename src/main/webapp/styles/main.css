@@ -1,0 +1,25 @@
+/* Set black background color, white text and some padding */
+footer {
+	background-color: #555;
+	color: white;
+	padding: 15px;
+}
+
+#my-container {
+	width: 100%;
+}
+
+.my-row {
+	height: 75px;
+	width: 100%;
+}
+
+.my-row .right-side {
+	height: 125px;
+	display: table;
+}
+
+.my-row .right-side p {
+	  display: table-cell;
+	  vertical-align: middle;
+}
