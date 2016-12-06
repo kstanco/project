@@ -16,6 +16,7 @@
 <script src="scripts/directive/leftPanel.js"></script>
 <script src="scripts/directive/navbar.js"></script>
 <script src="scripts/directive/rightPanel.js"></script>
+<script src="scripts/controller/myController.js"></script>
 <link rel="stylesheet" type="text/css" href="scripts/bootstrap.css"></link>
 <link rel="stylesheet" type="text/css" href="styles/main.css"></link>
 
@@ -25,7 +26,8 @@
 
 <body>
 
-  <div ng-app="myApp">
+  <div ng-app="myApp" ng-controller="myController as someController">
+  
     <div my-navbar></div>
     <div class="text-center">
       <div class="container" id="my-container">
@@ -41,12 +43,8 @@
 </body>
 
 <script>
-	var setTime = function() {
-		document.getElementById("todaysDate").innerHTML = Date();
-	}
-
 	window.setInterval(function() {
-		setTime();
+		document.getElementById("todaysDate").innerHTML = Date();
 	}, 10);
 </script>
 </html>

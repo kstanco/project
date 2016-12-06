@@ -23,3 +23,18 @@ footer {
 	  display: table-cell;
 	  vertical-align: middle;
 }
+
+.my-dropdown-content {
+    display: none;
+
+}
+.my-dropdown-class {
+/* 	display: inline-block; */
+	
+}
+
+
+.my-dropdown-class:hover .my-dropdown-content {
+    display: block;
+    
+}

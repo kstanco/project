@@ -6,9 +6,26 @@
       <div class="panel panel-default text-left">
         <div class="panel-body">
           <p contenteditable="true">Status: Feeling Blue</p>
-          <button type="button" class="btn btn-default btn-sm">
-            <span class="glyphicon glyphicon-thumbs-up"></span> Like
+          <div class="my-dropdown-class">
+          
+          <button type="button" ng-click="someController.alertThis('Hi There')" class="btn btn-default btn-sm">
+             Like
           </button>
+          
+          <button type="button" ng-click="someController.alertThis('Not Like')" class="btn btn-default btn-sm my-dropdown-content">
+             Not Like
+          </button>
+          
+          <button type="button" ng-click="someController.alertThis('Kinda Like')" class="btn btn-default btn-sm my-dropdown-content">
+             kinda Like
+          </button>
+          
+          <button type="button" ng-click="someController.alertThis('DONT Like')" class="btn btn-default btn-sm my-dropdown-content">
+             DONT Like
+          </button>
+          
+          
+          </div>
         </div>
       </div>
     </div>
