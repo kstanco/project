@@ -33,19 +33,26 @@ footer {
 	
 }
 
+.img-display-thumb-class {
+	HEIGHT: 50px; 
+	WIDTH: 50px; 
+}
 
 .my-dropdown-class:hover .my-dropdown-content {
     display: block;
     
 }
 
+
 .img-display-class {
-	height:200px;
-	width:200px;
+	height:100px;
+	width:110px;
 	display: inline-block;
+	image-orientation: from-image;
 }
 .img-lg-display-class {
-	height:400px;
-	width:400px;
+	height:200px;
+	width:220px;
 	display: inline-block;
+	image-orientation: from-image;
 }

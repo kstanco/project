@@ -1,12 +1,23 @@
 
 <div class="col-sm-8 well">
   <h1>Gallery Page!</h1>
-  <div> 
-     <img class="img-lg-display-class" ng-src="{{gallery.selectedPhoto}}" />
+
+  <div>
+    <input type="file" multiple onchange="angular.element(this).controller().fileChanged(this)">
+    <span ng-repeat="fileblob in gallery.fileBlobs">
+       <img ng-src="{{fileblob}}" class="img-display-thumb-class" id="image"/>
+    </span>
+    <p>Click the submit button to uploaded photos.</p>
+    <button onclick="loadPhotos()">Submit</button>
   </div>
-  
+
+  <div>
+    <img class="img-lg-display-class" ng-src="{{gallery.selectedPhoto}}" />
+  </div>
+
   <div ng-repeat="photo in gallery.photos" class="col-sm-3">
-    <img ng-click="gallery.selectPhoto(photo)" class="img-display-class" ng-src="{{photo}}" />
+    <img ng-click="gallery.selectPhoto(photo)" class="img-display-class"
+      ng-src="{{photo}}" />
   </div>
 
 
