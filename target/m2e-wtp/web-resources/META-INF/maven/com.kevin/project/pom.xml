@@ -9,6 +9,7 @@
 	<properties>
 		<junit.version>4.12</junit.version>
 		<springmvc.version>4.3.3.RELEASE</springmvc.version>
+		<jackson.version>1.9.13</jackson.version>
 	</properties>
 	
 	<dependencies>
@@ -24,7 +25,17 @@
 			<artifactId>spring-webmvc</artifactId>
 			<version>${springmvc.version}</version>
 		</dependency>
-
+<!-- Jackson JSON Mapper -->
+    <dependency>
+        <groupId>org.codehaus.jackson</groupId>
+        <artifactId>jackson-mapper-asl</artifactId>
+        <version>${jackson.version}</version>
+    </dependency>
+    <dependency>
+    <groupId>com.fasterxml.jackson.core</groupId>
+    <artifactId>jackson-databind</artifactId>
+    <version>2.5.0</version>
+</dependency>
 
 	</dependencies>
 </project>

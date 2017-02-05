@@ -12,6 +12,7 @@
       <ul class="nav navbar-nav">
         <li ui-sref-active="active"><a ui-sref="home">Home</a></li>
         <li ui-sref-active="active"><a ui-sref="messages">Messages</a></li>
+        <li ui-sref-active="active"><a ui-sref="gallery">Gallery</a></li>
       </ul>
       <form class="navbar-form navbar-right" role="search">
         <div class="form-group input-group">
@@ -24,8 +25,12 @@
         </div>
       </form>
       <ul class="nav navbar-nav navbar-right">
-        <li ui-sref-active="active"><a ui-sref="myAccount"><span class="glyphicon glyphicon-user"></span>
+        <li ng-show="navbar.authenticated" ui-sref-active="active"><a ui-sref="myAccount"><span class="glyphicon glyphicon-user"></span>
             My Account</a></li>
+        <li ng-show="navbar.authenticated"><a ng-click="navbar.setAuthenticated(false)">
+            Logout</a></li>    
+        <li ng-hide="navbar.authenticated"><a ng-click="navbar.setAuthenticated(true)">
+            Login</a></li>
       </ul>
     </div>
   </div>

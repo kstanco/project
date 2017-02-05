@@ -38,3 +38,14 @@ footer {
     display: block;
     
 }
+
+.img-display-class {
+	height:200px;
+	width:200px;
+	display: inline-block;
+}
+.img-lg-display-class {
+	height:400px;
+	width:400px;
+	display: inline-block;
+}

@@ -1,34 +1,33 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
-<title>Charlie's Blog</title>
-<link rel="icon"   type="image/jpg" href="resources/whatsUp.jpg" />
-
-
-<script src="scripts/angular.min.js"></script>
-<!-- <script src="scripts/angular-ui-router.js"></script> -->
-<script
-  src="//angular-ui.github.io/ui-router/release/angular-ui-router.js"></script>
-
-<script src="scripts/app/app.js"></script>
-<script src="scripts/directive/footer.js"></script>
-<script src="scripts/directive/leftPanel.js"></script>
-<script src="scripts/directive/navbar.js"></script>
-<script src="scripts/directive/rightPanel.js"></script>
-<script src="scripts/controller/myController.js"></script>
-<link rel="stylesheet" type="text/css" href="scripts/bootstrap.css"></link>
-<link rel="stylesheet" type="text/css" href="styles/main.css"></link>
-
-
-
+  <meta charset="UTF-8">
+  <title>Charlie's Blog</title>
+  <link rel="icon"   type="image/jpg" href="resources/whatsUp.jpg" />
+  
+  <script src="scripts/libraries/angular.min.js"></script>
+  <script src="scripts/libraries/angular-ui-router.js"></script>
+  <script src="scripts/app/app.js"></script>
+  <script src="scripts/directive/footer.js"></script>
+  <script src="scripts/directive/leftPanel.js"></script>
+  <script src="scripts/directive/navbar.js"></script>
+  <script src="scripts/directive/rightPanel.js"></script>
+  <script src="scripts/controller/navbarController.js"></script>
+  <script src="scripts/controller/blogController.js"></script>
+  <script src="scripts/controller/galleryController.js"></script>
+  <script src="scripts/controller/msgController.js"></script>
+  <script src="scripts/service/galleryService.js"></script>
+  <script src="scripts/service/blogService.js"></script>
+  <script src="scripts/app/appRouter.js"></script>
+  <link rel="stylesheet" type="text/css" href="scripts/libraries/bootstrap.css"></link>
+  <link rel="stylesheet" type="text/css" href="styles/main.css"></link>
 </head>
 
 <body>
-
-  <div ng-app="myApp" ng-controller="myController as someController">
-  
+  <div ng-app="myApp">
+    
     <div my-navbar></div>
+    
     <div class="text-center">
       <div class="container" id="my-container">
         <left-panel></left-panel>
@@ -36,15 +35,15 @@
         <right-panel></right-panel>
       </div>
     </div>
-
+   
     <my-footer></my-footer>
   </div>
 
 </body>
 
 <script>
-	window.setInterval(function() {
-		document.getElementById("todaysDate").innerHTML = Date();
-	}, 10);
+// 	window.setInterval(function() {
+// 		document.getElementById("todaysDate").innerHTML = Date();
+// 	}, 10);
 </script>
 </html>
