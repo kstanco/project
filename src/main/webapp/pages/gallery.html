@@ -8,16 +8,16 @@
        <img ng-src="{{fileblob}}" class="img-display-thumb-class" id="image"/>
     </span>
     <p>Click the submit button to uploaded photos.</p>
-    <button onclick="loadPhotos()">Submit</button>
+    <button ng-click="gallery.submitPhotos()">Submit</button>
   </div>
 
   <div>
-    <img class="img-lg-display-class" ng-src="{{gallery.selectedPhoto}}" />
+    <img class="img-lg-display-class" ng-src="{{gallery.selectedPhoto.photoBlob}}" />
   </div>
 
   <div ng-repeat="photo in gallery.photos" class="col-sm-3">
     <img ng-click="gallery.selectPhoto(photo)" class="img-display-class"
-      ng-src="{{photo}}" />
+      ng-src="{{photo.photoBlob}}" />
   </div>
 
 

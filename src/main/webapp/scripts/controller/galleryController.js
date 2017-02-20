@@ -5,11 +5,9 @@ angular.module('myApp').controller("galleryController", ['galleryService', '$sco
 	
 	$scope.photos=photos
 	
-//	$scope.$watch('photos', function (photos){
-		self.photos = photos;
-		self.selectedPhoto = self.photos[0];
-//	});	
-	
+	self.photos = photos;
+	self.selectedPhoto = self.photos[0];
+
 	self.selectPhoto= function(selectedPhoto){
 		self.selectedPhoto = selectedPhoto;
 	}
@@ -37,7 +35,7 @@ angular.module('myApp').controller("galleryController", ['galleryService', '$sco
 	 }
 	
 	
-	self.submitPhoto= function() {
-		galleryService.postPhotos(self.fileBlob);
+	self.submitPhotos= function() {
+		galleryService.postPhotos(self.fileBlobs);
 	}
 }]);
