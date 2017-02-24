@@ -4,7 +4,7 @@ module.service('galleryService', ['$http', '$q', function($http , $q){
 	var self = this;
 	var photos;
 	var defer = $q.defer();
-	var baseUri = 'http://localhost:8080/project/api/' 
+	var baseUri = 'http://localhost:8081/project/api/' 
 	
 	self.getPhotos = function() {
 		//get photos n insert into array

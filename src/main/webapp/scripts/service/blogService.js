@@ -6,7 +6,7 @@ module.service('blogService', ['$http', '$q', function($http, $q){
 	var defer = $q.defer();
 	
 	self.getBlogs = function() {
-		$http.get('http://localhost:8080/project/api/getblogs')
+		$http.get('http://localhost:8081/project/api/getblogs')
 		  .success(function(responseData){
 		     defer.resolve(responseData);
 	    });
