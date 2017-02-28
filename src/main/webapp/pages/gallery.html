@@ -15,7 +15,7 @@
     <img class="img-lg-display-class" ng-src="{{gallery.selectedPhoto.photoBlob}}" />
   </div>
 
-  <div ng-repeat="photo in gallery.photos" class="col-sm-3">
+  <div ng-repeat="photo in gallery.photos.content" class="col-sm-3">
     <img ng-click="gallery.selectPhoto(photo)" class="img-display-class"
       ng-src="{{photo.photoBlob}}" />
   </div>
