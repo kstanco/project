@@ -17,6 +17,7 @@
 	<!-- Scans the classpath of this application for @Components to deploy as 
 		beans -->
 	<context:component-scan base-package="com.charlie.controllers" />
+	<context:component-scan base-package="com.charlie.services" />
 
 	<!-- Configures the @Controller programming model -->
 	<mvc:annotation-driven />

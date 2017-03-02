@@ -1,49 +1,49 @@
 
 <div class="col-sm-8">
 
-  <div class="my-row">
-    <div class="col-sm-12">
-      <div class="panel panel-default text-left">
-        <div class="panel-body">
-          <p contenteditable="true">Status: Feeling Blue</p>
-          <div class="my-dropdown-class">
-          
-          <button type="button" class="btn btn-default btn-sm">
-             Like
-          </button>
-          
-          <button type="button" class="btn btn-default btn-sm my-dropdown-content">
-             Not Like
-          </button>
-          
-          <button type="button" class="btn btn-default btn-sm my-dropdown-content">
-             kinda Like
-          </button>
-          
-          <button type="button" class="btn btn-default btn-sm my-dropdown-content">
-             DONT Like
-          </button>
-          
-          
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+	<div class="my-row">
+		<div class="col-sm-12">
+			<div class="panel panel-default text-left">
+				<div class="panel-body">
+					<p contenteditable="true">Status: Feeling Blue</p>
+					<div class="my-dropdown-class">
 
-  <div ng-if= "blog.blogPosts" ng-repeat="blogPost in blog.blogPosts" class="my-row">
-    <div class="col-sm-3 well">
+						<button type="button" class="btn btn-default btn-sm">
+							Like</button>
 
-        <p>{{blogPost.author}}</p>
-<!--         <img ng-src="{{blogPost.image}}" class="img-circle" height="55" width="55" -->
-<!--           alt="Avatar"> -->
+						<button type="button"
+							class="btn btn-default btn-sm my-dropdown-content">Not
+							Like</button>
 
-    </div>
-    <div class="col-sm-9">
-      <div class="well right-side">
-        <p>{{blogPost.post}}</p>
-      </div>
-    </div>
-  </div>
- 
+						<button type="button"
+							class="btn btn-default btn-sm my-dropdown-content">
+							kinda Like</button>
+
+						<button type="button"
+							class="btn btn-default btn-sm my-dropdown-content">DONT
+							Like</button>
+
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div ng-if="blog.blogPosts"
+		ng-repeat="blogPost in blog.blogPosts.content" class="my-row">
+		<div class="col-sm-3 well">
+
+			<p>{{blogPost.author}}</p>
+			<p>{{blogPost.timestamp | date:"M/dd/yyyy"}}</p>
+			<p>{{blogPost.timestamp | date:"hh:mm"}}</p>
+
+		</div>
+		<div class="col-sm-9">
+			<div class="well right-side">
+				<p>{{blogPost.post}}</p>
+			</div>
+		</div>
+	</div>
+
 </div>

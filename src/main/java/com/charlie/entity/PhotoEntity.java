@@ -1,7 +1,5 @@
 package com.charlie.entity;
 
-
-
 import java.util.Date;
 
 import javax.persistence.Column;
@@ -18,10 +16,10 @@ public class PhotoEntity {
 	@Id
 	@SequenceGenerator(name = "gallery_id")
 	@Column(name = "id")
-	Integer photoId;
+	private Integer photoId;
 
 	@Column(name = "photoblob")
-	String photoBlob;
+	private String photoBlob;
 
 	@Column(name = "date_added", columnDefinition = "TIMESTAMP WITHOUT TIME ZONE")
 	@Temporal(TemporalType.TIMESTAMP)
